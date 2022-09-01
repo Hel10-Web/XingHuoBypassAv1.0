@@ -1,0 +1,4 @@
+requests~=2.27.1
+idna~=3.3
+urllib3~=1.26.9
+pyqt5~=5.15.7
