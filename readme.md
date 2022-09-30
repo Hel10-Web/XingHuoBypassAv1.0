@@ -4,7 +4,8 @@
 
 ## 安装
 
-需要pyinstall环境
+需要pyinstall环境,保证pyinstaller能正常在cmd下运行
+![image](https://user-images.githubusercontent.com/54520809/193220055-284ef809-5f62-481f-8c90-5bc3a118aad8.png)
 
 ```python
  pip3 install pyinstaller
