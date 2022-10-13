@@ -97,7 +97,10 @@ class Ui_widget(object):
         QtWidgets.QApplication.processEvents()
 
     def show_message(self):
-        QMessageBox.information(self, "成功", "生成成功！", QMessageBox.Yes)
+        reply = QMessageBox.information(self, "成功", "生成成功,exe和json文件配合使用", QMessageBox.Yes)
+        if reply == QMessageBox.Yes:
+            quit()
+
 
     def closeEvent(self, event):
         reply = QMessageBox.question(self, '退出', '确认关闭吗？',QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
